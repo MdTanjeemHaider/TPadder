@@ -10,10 +10,6 @@ Terraria requires mutliblock tiles to have a 2 pixel padding between each block 
 
 ### Note
 
-For the best outcome, ensure that the source texture has dimensions that are multiples of 16px. Deviation from this guideline may result in unexpected results.
-
-If your texture does is not have the correct dimensions, change your texture's canvas size to the correct dimensions and center your texture.
-
 For optimal results, it is important to ensure that the source texture has dimensions that are multiples of 16px. Deviating from this guideline may result in unexpected results.
 
 if your texture does not have the correct dimensions, follow these steps to adjust it:
