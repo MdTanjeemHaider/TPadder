@@ -1,8 +1,12 @@
+import os
+import sys
 import tkinter as tk
 import tkinter.filedialog as filedialog
 import tkinter.font as font
 
 from PIL import Image, ImageFilter
+
+ICONPATH = os.path.join(getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__))), "Icons/icon.ico")
 
 def browseSource():
     path = filedialog.askopenfilename(filetypes=[("PNG Files", "*.png")])
@@ -82,7 +86,7 @@ def getHighlightedOutline(sourceImg):
 
 # Main window
 window = tk.Tk()
-window.iconbitmap("Icon/icon.ico")
+window.iconbitmap(ICONPATH)
 window.title("TPadder")
 window.geometry("350x250")
 
