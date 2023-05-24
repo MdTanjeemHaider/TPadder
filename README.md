@@ -1,4 +1,4 @@
-# ![Icon](Icon/icon.png)TPadder
+# ![Icon](Icons/icon.png)TPadder
 
 TPadder is a simple application that allows you to turn an item texture into an tile texture.
 
