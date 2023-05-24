@@ -1,0 +1,1 @@
+pyinstaller --clean --onefile --noconsole --workpath build --specpath build --distpath build --icon=../Icons/icon.ico --add-data "../Icons/icon.ico;Icons" TPadder.py
