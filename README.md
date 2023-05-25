@@ -1,4 +1,4 @@
-# ![Icon](Icon/icon.png)TPadder
+# ![Icon](Icons/icon.png)TPadder
 
 TPadder is a simple application that allows you to turn an item texture into an tile texture.
 
@@ -7,6 +7,16 @@ Terraria requires mutliblock tiles to have a 2 pixel padding between each block 
 ### Example
 
 ![Example](Example/Example.png)
+
+### Prerequisites
+
+Please note that the following prerequisites are specifically for running the Python version. If you only wish to run the application without Python, you can skip these requirements and directly use the executable file available on the [GitHub releases page](https://github.com/MdTanjeemHaider/TPadder/releases).
+
+However, if you intend to run the Python version, please ensure that you have the following prerequisites in place:
+
+* **Python:** Make sure you have Python installed on your system. you can download the latest version of python from the [official website](https://www.python.org/downloads/) and follow the installation instruction for your operating system.
+* **Python Packages:** The **'tkinter'** package is usually included with the Python installations, but **'pillow'** may need to be installed seperately. You can install it by running the following command in your terminal or command prompt: `pip install pillow`
+* **Pyinstaller:** This is only required if you wish to build the executable file. You can install it by running the following command in your terminal or command prompt: `pip install pyinstaller`
 
 ### Note
 
@@ -20,7 +30,6 @@ if your texture does not have the correct dimensions, follow these steps to adju
 
 1. Change the canvas size of your texture to match the correct dimensions by adding or removing pixels as necessary.
 2. Center your texture within the adjusted canvas.
-
 
 ### Contribution
 
