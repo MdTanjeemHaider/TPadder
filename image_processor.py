@@ -1,10 +1,22 @@
 """Utility functions for TPadder"""
-from PIL import Image, ImageFilter
+from PIL import Image, ImageFilter, ImageTk
 
 
 # Constants
 BLOCK_SIZE = 16
 PADDING = 2
+
+
+def is_valid_image(image):
+    """Check if image is a png file bigger than atleast one block."""
+    if image.mode != "RGBA":
+        return False
+
+    width, height = image.size
+    if width < BLOCK_SIZE or height < BLOCK_SIZE:
+        return False
+
+    return True
 
 
 def convert(source_img):
@@ -31,7 +43,7 @@ def convert(source_img):
 
 
 def convert_highlighted(source_img, color=(255, 255, 255, 255)):
-    """Convert a source image into a tiled texture with padding between blocks and a highlighted outline."""
+    """Create outline of an image then turn into a tiled texture with padding between blocks."""
     outline = source_img.filter(ImageFilter.FIND_EDGES)
     pixels = outline.load()
 
@@ -41,3 +53,11 @@ def convert_highlighted(source_img, color=(255, 255, 255, 255)):
                 pixels[x, y] = color
 
     return convert(outline)
+
+
+def create_thumbnail(image, max_size):
+    """Create a thumbnail of the image with the specified maximum size."""
+    image_copy = image.copy()
+    image_copy.thumbnail(max_size)
+
+    return ImageTk.PhotoImage(image_copy)
